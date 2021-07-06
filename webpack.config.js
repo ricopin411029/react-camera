@@ -50,6 +50,10 @@ const config = {
       '~': path.resolve(__dirname, './src'),
     },
   },
+  devServer: {
+    host: '0.0.0.0',
+    allowedHosts: ['.local'],
+  },
 };
 
 module.exports = config;

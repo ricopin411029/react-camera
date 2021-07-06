@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "dev": "webpack serve --config ./webpack.config.js --hot --mode development"
+    "dev": "webpack serve --config ./webpack.config.js --hot --mode development",
+    "build": "webpack --mode production",
+    "devtools": "react-devtools"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -19,6 +21,7 @@
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.3.2",
+    "react-devtools": "^4.13.5",
     "react-hot-loader": "^4.13.0",
     "style-loader": "^3.0.0",
     "stylelint": "^13.13.1",
@@ -32,6 +35,7 @@
   "dependencies": {
     "core-js": "^3.15.2",
     "react": "^17.0.2",
+    "react-devtools-core": "^4.13.5",
     "react-dom": "^17.0.2"
   },
   "browserslist": [
