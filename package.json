@@ -12,12 +12,19 @@
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^5.2.6",
     "html-webpack-plugin": "^5.3.2",
+    "husky": "^7.0.1",
     "license-webpack-plugin": "^2.3.19",
+    "lint-staged": "^11.0.0",
     "postcss": "^8.3.5",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.3.2",
     "react-hot-loader": "^4.13.0",
     "style-loader": "^3.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recess-order": "^2.4.0",
+    "stylelint-prettier": "^1.2.0",
     "webpack": "^5.42.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
@@ -34,5 +41,20 @@
     "last 2 FirefoxAndroid versions",
     "last 2 Safari versions",
     "last 2 iOS versions"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "git add"
+    ]
+  }
 }
