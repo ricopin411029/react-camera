@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import App from '~/App';
+
 ReactDOM.render(
-  React.createElement('h1', {}, 'Hello World! - はじめての React アプリ！'),
+  <App />,
   document.getElementById('app'),
 );
